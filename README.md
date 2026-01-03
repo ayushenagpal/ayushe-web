@@ -1,4 +1,36 @@
 # Astro Starter Kit: Minimal
+# ayushe — personal site
+
+minimal, elegant, fast. built with astro + tailwind. deployed on vercel.
+
+## dev
+
+```bash
+npm install
+npm run dev
+```
+
+## structure
+
+- homepage: hero, intro, quick links
+- about: longer bio, resume link
+- building: featured projects
+- writing: substack embed (or markdown later)
+- gallery: art / photography toggle
+- contact: email + socials
+
+## design system
+
+- headers: serif (`eb garamond`), body: sans (`inter`)
+- lots of white space, subtle gray, accent green `#0b5c4a`
+- lowercase everywhere
+
+## deploy (vercel)
+
+1. push to github
+2. import repo in vercel, framework: astro
+3. build command: `astro build` (default), output: `dist`
+4. set custom domain when ready
 
 ```sh
 npm create astro@latest -- --template minimal

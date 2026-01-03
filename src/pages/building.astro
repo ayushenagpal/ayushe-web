@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const featured = [
+  { title: "hackathon project", blurb: "one-liner about what it does", link: "#", code: "#", image: "/favicon.svg", tag: "personal" },
+  { title: "open source tool", blurb: "one-liner about what it does", link: "#", code: "#", image: "/favicon.svg", tag: "open source" },
+  { title: "professional highlight", blurb: "one-liner about impact", link: "#", code: "#", image: "/favicon.svg", tag: "professional" }
+];
+---
+<Layout title="building — ayushe">
+  <Nav />
+  <main class="mx-auto max-w-5xl px-6 py-16">
+    <h1 class="text-3xl md:text-4xl font-serif mb-8">building</h1>
+    <section class="mb-12 max-w-3xl prose prose-neutral">
+      <p>coming soon!!!!</p>
+    </section>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {featured.map((p) => (
+        <article class="border border-gray-200 rounded-xl overflow-hidden hover:border-gray-900 transition-colors">
+          <img src={p.image} alt={p.title} class="w-full aspect-video object-cover bg-gray-50" />
+          <div class="p-4">
+            <div class="text-xs text-gray-500 mb-1">{p.tag}</div>
+            <h2 class="text-lg font-serif">{p.title}</h2>
+            <p class="text-sm text-gray-600 mt-2">{p.blurb}</p>
+            <div class="mt-4 flex items-center gap-4 text-sm">
+              <a class="underline underline-offset-4" href={p.link} target="_blank">demo</a>
+              <a class="underline underline-offset-4" href={p.code} target="_blank">code</a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</Layout>
+

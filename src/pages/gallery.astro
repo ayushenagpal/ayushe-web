@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const tabs = ["art"] as const;
+const active = "art";
+const images = {
+  art: Array.from({ length: 6 }, (_, i) => `/gallery/art/${i + 1}.jpg`)
+};
+---
+<Layout title="gallery — ayushe">
+  <Nav />
+  <main class="mx-auto max-w-5xl px-6 py-16">
+    <h1 class="text-3xl md:text-4xl font-serif mb-6">gallery</h1>
+    <section class="mb-12 max-w-3xl prose prose-neutral">
+      <p>coming soon!</p>
+    </section>
+    <div class="flex gap-4 mb-8 text-sm">
+      <span class="px-3 py-1 rounded-full border border-gray-900">art</span>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      {images[active].map((src) => (
+        <a href={src} target="_blank" class="group block overflow-hidden rounded-lg border border-gray-200">
+          <img src={src} alt="" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+        </a>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</Layout>
+

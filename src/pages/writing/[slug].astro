@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("writing");
+  return posts.map((p) => ({ 
+    params: { slug: p.slug }, 
+    props: { post: p } 
+  }));
+}
+
+interface Props {
+  post: Awaited<ReturnType<typeof getCollection<"writing">>>[number];
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+<Layout title={`${post.data.title} — ayushe`}>
+  <Nav />
+  <main class="mx-auto max-w-3xl px-6 py-16">
+    <header class="mb-8">
+      <h1 class="text-3xl md:text-4xl font-serif">{post.data.title}</h1>
+      <time class="text-xs text-gray-500" datetime={post.data.published.toISOString()}>{new Date(post.data.published).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' })}</time>
+    </header>
+    <article class="prose prose-neutral max-w-none">
+      <Content />
+    </article>
+  </main>
+  <Footer />
+</Layout>
+
