@@ -1,12 +1,53 @@
 ---
 ---
-<nav class="mx-auto max-w-5xl px-6 py-6 flex items-center justify-between">
-  <a href="/" class="text-lg font-serif tracking-tight hover:opacity-70 transition-opacity">ayushe.com</a>
-  <div class="flex items-center gap-6 text-sm">
+<nav class="mx-auto max-w-5xl px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between relative">
+  <a href="/" class="text-base sm:text-lg md:text-xl font-serif tracking-tight hover:opacity-70 transition-opacity">ayushe.com</a>
+  <div class="flex items-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm">
     <a class="hover:opacity-70 transition-opacity" href="/building">building</a>
     <a class="hover:opacity-70 transition-opacity" href="/writing">writing</a>
     <a class="hover:opacity-70 transition-opacity" href="/gallery">gallery</a>
-    <a class="hover:opacity-70 transition-opacity" href="https://ayushe.my.canva.site/">ugc portfolio</a>
+    <a class="hover:opacity-70 transition-opacity hidden sm:inline" href="https://ayushe.my.canva.site/">ugc portfolio</a>
+    
+    <!-- Mobile dropdown -->
+    <div class="relative sm:hidden">
+      <button 
+        id="mobile-menu-btn"
+        class="hover:opacity-70 transition-opacity"
+        aria-label="More menu"
+      >
+        more
+      </button>
+      <div 
+        id="mobile-dropdown"
+        class="hidden absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+      >
+        <a 
+          href="https://ayushe.my.canva.site/" 
+          class="block px-4 py-2 hover:bg-gray-50 transition-colors"
+        >
+          ugc portfolio
+        </a>
+      </div>
+    </div>
   </div>
 </nav>
+
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const dropdown = document.getElementById('mobile-dropdown');
+  
+  if (menuBtn && dropdown) {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle('hidden');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+  }
+</script>
 

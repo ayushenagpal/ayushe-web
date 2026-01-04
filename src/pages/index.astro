@@ -5,30 +5,30 @@ import Footer from "../components/Footer.astro";
 ---
 <Layout>
   <Nav />
-  <main class="mx-auto max-w-5xl px-6 py-20">
+  <main class="mx-auto max-w-5xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
     <section class="mb-16">
-      <div class="flex flex-col md:flex-row gap-8 items-start">
-        <div class="flex-shrink-0">
+      <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-center">
+        <div class="flex-shrink-0 md:self-center">
           <img 
             src="/ayushe.jpg" 
             alt="Ayushe" 
-            class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-2 border-gray-200"
+            class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover border-2 border-gray-200"
           />
         </div>
-        <div class="flex-1">
-          <h1 class="text-4xl md:text-6xl font-serif leading-tight">hi, i'm ayushe</h1>
-          <p class="mt-4 text-base md:text-lg text-gray-600">exploring with purpose, building with curiosity.</p>
-          <div class="mt-6 max-w-3xl prose prose-neutral">
-            <p>i'm ayushe — a software engineer at google and a builder at heart. i'm always dreaming up new ideas, experimenting with projects, and finding ways to merge tech with creativity. outside of my 9–5, i explore a wide range of interests — a work-in-progress generalist by choice. a little of everything — dabbling in art, traveling, trying different workouts, and experimenting with content creation. i love learning, iterating, and chasing opportunities that push me to grow.</p>
+        <div class="flex-1 text-center md:text-left">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">hi, i'm ayushe</h1>
+          <p class="mt-4 text-sm sm:text-base md:text-lg text-gray-600">exploring with purpose, building with curiosity.</p>
+          <div class="mt-4 sm:mt-6 max-w-3xl prose prose-neutral mx-auto md:mx-0 prose-sm sm:prose-base">
+            <p class="text-sm sm:text-base">i'm ayushe — a software engineer at google and a builder at heart. i'm always dreaming up new ideas, experimenting with projects, and finding ways to merge tech with creativity. outside of my 9–5, i explore a wide range of interests — a work-in-progress generalist by choice. a little of everything — dabbling in art, traveling, trying different workouts, and experimenting with content creation. i love learning, iterating, and chasing opportunities that push me to grow.</p>
           </div>
         </div>
       </div>
     </section>
     
-    <section class="mb-16 space-y-12">
+    <section class="mb-12 sm:mb-16 space-y-8 sm:space-y-10 md:space-y-12">
       <div>
-        <h2 class="text-lg font-serif mb-6 accent-text">currently</h2>
-        <ul class="space-y-3 text-sm text-gray-700 max-w-2xl">
+        <h2 class="text-base sm:text-lg md:text-xl font-serif mb-4 sm:mb-6 accent-text">currently</h2>
+        <ul class="space-y-2 sm:space-y-3 text-xs sm:text-sm md:text-base text-gray-700 max-w-2xl">
           <li>• building products at <a href="/building" class="underline underline-offset-4 accent-hover">google</a> — solving complex problems at scale and pushing the boundaries of what's possible with technology</li>
           <li>• writing on <a href="/writing" class="underline underline-offset-4 accent-hover">substack</a> — sharing thoughts on building, learning, and the intersection of tech and creativity</li>
           <li>• creating <a href="/gallery" class="underline underline-offset-4 accent-hover">art</a> — exploring digital mediums and traditional techniques to express ideas that words can't capture</li>
@@ -39,8 +39,8 @@ import Footer from "../components/Footer.astro";
       <div class="section-separator accent"></div>
       
       <div>
-        <h2 class="text-lg font-serif mb-6 accent-text">past</h2>
-        <ul class="space-y-3 text-sm text-gray-700 max-w-2xl">
+        <h2 class="text-base sm:text-lg md:text-xl font-serif mb-4 sm:mb-6 accent-text">past</h2>
+        <ul class="space-y-2 sm:space-y-3 text-xs sm:text-sm md:text-base text-gray-700 max-w-2xl">
           <li>• built <a href="/building" class="underline underline-offset-4 accent-hover">hackathon projects</a> that won awards and turned late-night coding sessions into real solutions for real problems</li>
           <li>• <a href="/writing" class="underline underline-offset-4 accent-hover">taught a workshop to over 200+ women</a> at the grace hopper celebration on building a RAG app</li>
           <li>• graduated with a computer science degree from uiuc — four years of late nights, breakthrough moments, and friendships that shaped who i am</li>
@@ -52,8 +52,8 @@ import Footer from "../components/Footer.astro";
       <div class="section-separator accent"></div>
       
       <div>
-        <h2 class="text-lg font-serif mb-6 accent-text">future</h2>
-        <ul class="space-y-3 text-sm text-gray-700 max-w-2xl">
+        <h2 class="text-base sm:text-lg md:text-xl font-serif mb-4 sm:mb-6 accent-text">future</h2>
+        <ul class="space-y-2 sm:space-y-3 text-xs sm:text-sm md:text-base text-gray-700 max-w-2xl">
           <li>• launching startup ideas that bridge the gap between technology and human connection</li>
           <li>• growing my <a href="/writing" class="underline underline-offset-4 accent-hover">writing</a> into a platform for sharing knowledge and building community</li>
         </ul>
@@ -62,52 +62,52 @@ import Footer from "../components/Footer.astro";
     
     <div class="section-separator"></div>
     
-    <section class="py-16">
-      <h2 class="text-2xl font-serif mb-8 accent-text">let's connect</h2>
-      <div class="grid md:grid-cols-2 gap-12">
+    <section class="py-10 sm:py-12 md:py-16">
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-serif mb-6 sm:mb-8 accent-text">let's connect</h2>
+      <div class="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
         <div>
-          <p class="text-gray-700 mb-6">i'm always excited to meet new people, collaborate on projects, or just chat about ideas.</p>
-          <div class="space-y-4">
-            <div class="flex items-center gap-3">
-              <span class="text-sm text-gray-500">email</span>
-              <a href="mailto:hi.ayushe@gmail.com" class="text-sm underline underline-offset-4 accent-hover">ayushenagpal@gmail.com</a>
+          <p class="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">i'm always excited to meet new people, collaborate on projects, or just chat about ideas.</p>
+          <div class="space-y-3 sm:space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+              <span class="text-xs sm:text-sm text-gray-500">email</span>
+              <a href="mailto:hi.ayushe@gmail.com" class="text-xs sm:text-sm underline underline-offset-4 accent-hover break-all">ayushenagpal@gmail.com</a>
             </div>
-            <div class="flex items-center gap-3">
-              <span class="text-sm text-gray-500">linkedin</span>
-              <a href="https://www.linkedin.com/in/ayushe-nagpal/" target="_blank" rel="noreferrer" class="text-sm underline underline-offset-4 accent-hover">linkedin.com/in/ayushe-nagpal</a>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+              <span class="text-xs sm:text-sm text-gray-500">linkedin</span>
+              <a href="https://www.linkedin.com/in/ayushe-nagpal/" target="_blank" rel="noreferrer" class="text-xs sm:text-sm underline underline-offset-4 accent-hover break-all">linkedin.com/in/ayushe-nagpal</a>
             </div>
-            <div class="flex items-center gap-3">
-              <span class="text-sm text-gray-500">twitter</span>
-              <a href="https://twitter.com/ayushe_n" target="_blank" rel="noreferrer" class="text-sm underline underline-offset-4 accent-hover">@ayushe_n</a>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+              <span class="text-xs sm:text-sm text-gray-500">twitter</span>
+              <a href="https://twitter.com/ayushe_n" target="_blank" rel="noreferrer" class="text-xs sm:text-sm underline underline-offset-4 accent-hover">@ayushe_n</a>
             </div>
-            <div class="flex items-center gap-3">
-              <span class="text-sm text-gray-500">instagram</span>
-              <a href="https://instagram.com/lifewithayushe" target="_blank" rel="noreferrer" class="text-sm underline underline-offset-4 accent-hover">@byayushe</a>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+              <span class="text-xs sm:text-sm text-gray-500">instagram</span>
+              <a href="https://instagram.com/lifewithayushe" target="_blank" rel="noreferrer" class="text-xs sm:text-sm underline underline-offset-4 accent-hover">@byayushe</a>
             </div>
           </div>
         </div>
         
         <div>
-          <form class="space-y-4">
-            <div class="grid grid-cols-2 gap-4">
+          <form class="space-y-3 sm:space-y-4">
+            <div class="grid grid-cols-2 gap-3 sm:gap-4">
               <div>
-                <label for="firstName" class="block text-xs text-gray-500 mb-1">first name</label>
-                <input type="text" id="firstName" name="firstName" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent" />
+                <label for="firstName" class="block text-xs sm:text-sm text-gray-500 mb-1">first name</label>
+                <input type="text" id="firstName" name="firstName" class="w-full px-2 sm:px-3 py-2 text-xs sm:text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent" />
               </div>
               <div>
-                <label for="lastName" class="block text-xs text-gray-500 mb-1">last name</label>
-                <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent" />
+                <label for="lastName" class="block text-xs sm:text-sm text-gray-500 mb-1">last name</label>
+                <input type="text" id="lastName" name="lastName" class="w-full px-2 sm:px-3 py-2 text-xs sm:text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent" />
               </div>
             </div>
             <div>
-              <label for="email" class="block text-xs text-gray-500 mb-1">email</label>
-              <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent" />
+              <label for="email" class="block text-xs sm:text-sm text-gray-500 mb-1">email</label>
+              <input type="email" id="email" name="email" class="w-full px-2 sm:px-3 py-2 text-xs sm:text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent" />
             </div>
             <div>
-              <label for="message" class="block text-xs text-gray-500 mb-1">message</label>
-              <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent resize-none"></textarea>
+              <label for="message" class="block text-xs sm:text-sm text-gray-500 mb-1">message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-2 sm:px-3 py-2 text-xs sm:text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent resize-none"></textarea>
             </div>
-            <button type="submit" class="w-full py-2 px-4 accent-bg text-white rounded-lg text-sm hover:opacity-90 transition-opacity">send message</button>
+            <button type="submit" class="w-full py-2 sm:py-2.5 px-4 text-xs sm:text-sm accent-bg text-white rounded-lg hover:opacity-90 transition-opacity">send message</button>
           </form>
         </div>
       </div>
